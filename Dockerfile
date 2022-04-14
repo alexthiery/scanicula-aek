@@ -7,7 +7,8 @@ LABEL authors="alex.thiery@crick.ac.uk" \
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
       apt-utils \
-      build-essential
+      build-essential \
+      libXtst
 
 RUN   R -e "install.packages(c('Rmisc', 'ggplot2', 'lme4', 'lsmeans', 'multcompView', 'Morpho'))" && \
       R -e "devtools::install_version('geomorph', version = '3.0.7', repos = 'http://cran.us.r-project.org')"
