@@ -9,5 +9,5 @@ RUN apt-get update \
       apt-utils \
       build-essential
 
-RUN   R -e "install.packages(c('devtools', 'Rmisc', 'ggplot2', 'dplyr', 'lme4', 'lsmeans', 'multcompView', 'Morpho))" && \
+RUN   R -e "install.packages(c('Rmisc', 'ggplot2', 'lme4', 'lsmeans', 'multcompView', 'Morpho'))" && \
       R -e "devtools::install_version('geomorph', version = '3.0.7', repos = 'http://cran.us.r-project.org')"
