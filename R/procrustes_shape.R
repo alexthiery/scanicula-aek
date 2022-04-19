@@ -123,7 +123,7 @@ ggplot(plot_data, aes(x = PC1, y = PC2, shape=treatment, fill = treatment)) +
   ylab(ylab) +
   theme(legend.position = c(0.87, 0.15),
         legend.title = element_blank(),
-        legend.key.size = unit(1.2, 'cm'),
+        legend.key.size = unit(0.9, 'cm'),
         legend.text = element_text(size=16),
         panel.border = element_rect(colour = "black", fill=NA, size=1),
         axis.text=element_text(size=16),

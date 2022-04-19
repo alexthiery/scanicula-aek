@@ -62,10 +62,10 @@ size$Treatment <- factor(x = size$Treatment , levels = c("DMSO", "IWR-1-endo", "
 
 png(paste0(plot_path, 'centroid_size.png'), width = 10, height = 15, units = 'cm', res = 400)
 ggplot(plot.dat, aes(x = Treatment, y = Size, colour = Treatment)) +
-  geom_point(data = size, aes(x = Treatment, y = Size, colour = Treatment), size = 1, alpha = 0.1) +
-  geom_point (size = 3) +
+  geom_point(data = size, aes(x = Treatment, y = Size, colour = Treatment), size = 1.5, alpha = 0.1) +
+  geom_point (size = 4) +
   geom_errorbar(aes(ymax = Size + SE,
-                    ymin = Size - SE), width = 0.2) +
+                    ymin = Size - SE), width = 0.3) +
   labs(x = "Treatment", y = "Centroid Size (mm)") +
   theme_bw() +
   theme(legend.position = "none")+
