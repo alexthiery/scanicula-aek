@@ -123,30 +123,30 @@ ggplot(plot_data, aes(x = PC1, y = PC2, shape=treatment, fill = treatment)) +
   ylab(ylab) +
   theme(legend.position = c(0.87, 0.15),
         legend.title = element_blank(),
-        legend.key.size = unit(1, 'cm'),
-        legend.text = element_text(size=12),
+        legend.key.size = unit(1.2, 'cm'),
+        legend.text = element_text(size=16),
         panel.border = element_rect(colour = "black", fill=NA, size=1),
-        axis.text=element_text(size=12),
-        axis.title=element_text(size=14),
+        axis.text=element_text(size=16),
+        axis.title=element_text(size=18),
         axis.text.y = element_text(angle = 90, hjust = 0.5))
 graphics.off()
 
 ref <- mshape(gdf.av$shape)# assign mean shape for use with plotRefToTarget below
 
 # Item 2 to plot, the first TPS grid; here we use the outline option to add to the visualisation
-png(paste0(plot_path, 'shape_x0.png'), width = 15, height = 15, units = 'cm', res = 400)
+png(paste0(plot_path, 'shape_x0.png'), width = 12, height = 12, units = 'cm', res = 400)
 plotRefToTarget(ref,PCA.1$pc.shapes$PC1min,outline=gdf.av$shape)
 graphics.off()
 
-png(paste0(plot_path, 'shape_x1.png'), width = 15, height = 15, units = 'cm', res = 400)
+png(paste0(plot_path, 'shape_x1.png'), width = 12, height = 12, units = 'cm', res = 400)
 plotRefToTarget(ref,PCA.1$pc.shapes$PC1max,outline=gdf.av$shape)
 graphics.off()
 
-png(paste0(plot_path, 'shape_y0.png'), width = 15, height = 15, units = 'cm', res = 400)
+png(paste0(plot_path, 'shape_y0.png'), width = 12, height = 12, units = 'cm', res = 400)
 plotRefToTarget(ref,PCA.1$pc.shapes$PC2min,outline=gdf.av$shape)
 graphics.off()
 
-png(paste0(plot_path, 'shape_y1.png'), width = 15, height = 15, units = 'cm', res = 400)
+png(paste0(plot_path, 'shape_y1.png'), width = 12, height = 12, units = 'cm', res = 400)
 plotRefToTarget(ref,PCA.1$pc.shapes$PC2max,outline=gdf.av$shape)
 graphics.off()
 
