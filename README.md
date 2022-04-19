@@ -14,8 +14,6 @@ We have included a Docker container so that you can reproducibly re-run our anal
 
 #### 1) Clone repository
 
-To re-run our analysis in RStudio Server
-
 In order to reproduce our analysis, first download our GitHub repository:
 
 ```shell
@@ -28,7 +26,7 @@ Download Docker desktop so that you can download and run our analysis using our 
 
 #### 3) Run analysis in RStudio Server
 
-Our Docker container is built from [Rocker](https://hub.docker.com/r/rocker/rstudio), so you can launch and re-run our analysis in RStudio Server.
+Our Docker container is built on top of [Rocker](https://hub.docker.com/r/rocker/rstudio), so you can launch and re-run our analysis in RStudio Server.
 
 To run this locally, open up terminal and `cd` into the cloned GitHub repository.
 
